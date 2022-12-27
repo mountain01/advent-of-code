@@ -16,7 +16,7 @@ export const getMaxCalories = (calories: number[]) => {
 };
 
 export const getTopThreeElves = (calories: number[]) => {
-  const sorted = calories.slice().sort((a:number,b:number)=>b-a);
+  const sorted = calories.slice().sort((a: number, b: number) => b - a);
   return sorted.slice(0, 3);
 };
 

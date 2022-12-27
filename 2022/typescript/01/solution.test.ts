@@ -6,7 +6,7 @@ import {
   getMaxCalories,
   getTopThreeElves,
   solutionA,
-solutionB,
+  solutionB,
 } from "./solution.ts";
 import { flow } from "../utils.ts";
 
@@ -25,7 +25,6 @@ const exampleInput = `
 9000
 
 10000`;
-
 
 describe("Day 01", () => {
   describe("Solution A", () => {
@@ -60,7 +59,7 @@ describe("Day 01", () => {
 
   describe("Solution B", () => {
     it("should get the top 3 elves", () => {
-      const expectedCalories = [10000,11000,24000].reverse();
+      const expectedCalories = [10000, 11000, 24000].reverse();
 
       const actualTop3 = flow(getElves, getCaloryTotals, getTopThreeElves)(
         exampleInput,
