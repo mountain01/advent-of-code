@@ -1,0 +1,59 @@
+{
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "request": "launch",
+      "name": "Debug Deno",
+      "type": "node",
+      "cwd": "${workspaceFolder}/2022/typescript",
+      "runtimeExecutable": "/home/codespace/.deno/bin/deno",
+      "runtimeArgs": [
+        "run",
+        "--unstable",
+        "--inspect",
+        "--allow-all",
+        "advent.ts",
+        "${input:dayPicker}",
+        "${input:solutionPicker}"
+      ],
+      "attachSimplePort": 9229,
+      "console": "integratedTerminal"
+    },
+    {
+      "request": "launch",
+      "name": "Debug Deno File",
+      "type": "node",
+      "cwd": "${workspaceFolder}/2022/typescript",
+      "runtimeExecutable": "/home/codespace/.deno/bin/deno",
+      "runtimeArgs": [
+        "run",
+        "--unstable",
+        "--inspect",
+        "--allow-all",
+        "advent.ts",
+        "${relativeFileDirname}",
+        "${input:solutionPicker}"
+      ],
+      "attachSimplePort": 9229,
+      "console": "integratedTerminal"
+    }
+  ],
+  "inputs": [
+    {
+      "id": "dayPicker",
+      "type": "promptString",
+      "default": "01",
+      "description": "Pick which day of the advent calendar to run"
+    },
+    {
+      "id": "solutionPicker",
+      "type": "pickString",
+      "options": ["a","b"],
+      "default": "a",
+      "description": "Which puzzle part to run"
+    }
+  ]
+}
