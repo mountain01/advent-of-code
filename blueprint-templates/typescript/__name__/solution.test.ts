@@ -11,14 +11,16 @@ const exampleInput = ``;
 
 describe("Day {{name}}", () => {
   describe("Solution A", () => {
-    it('should run a test', () => {
-      assertEquals(3, 3);
+    it('should not be implemented', () => {
+      const result = solutionA(exampleInput)
+      assertEquals(result, 'Not Implemented');
     })
   });
 
   describe("Solution B", () => {
-    it('should run a test', () => {
-      assertEquals(3, 3);
+    it('should not be implemented', () => {
+      const result = solutionB(exampleInput)
+      assertEquals(result, 'Not Implemented');
     })
   });
 });
