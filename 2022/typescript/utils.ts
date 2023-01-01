@@ -21,4 +21,5 @@ const flow = ld.flow;
 const intersection = ld.intersection;
 const chunk = ld.chunk;
 const range = ld.range;
-export { chunk, flow, intersection, join, range };
+const uniq = ld.uniq;
+export { chunk, flow, intersection, join, range , uniq};
