@@ -6,6 +6,22 @@
   "configurations": [
     {
       "request": "launch",
+      "name": "Debug Deno Test",
+      "type": "node",
+      "cwd": "${workspaceFolder}/2022/typescript",
+      "runtimeExecutable": "/home/codespace/.deno/bin/deno",
+      "runtimeArgs": [
+        "test",
+        "--unstable",
+        "--inspect-wait",
+        "--allow-all",
+        "${input:dayPicker}",
+      ],
+      "attachSimplePort": 9229,
+      "console": "integratedTerminal"
+    },
+    {
+      "request": "launch",
       "name": "Debug Deno",
       "type": "node",
       "cwd": "${workspaceFolder}/2022/typescript",
@@ -13,7 +29,7 @@
       "runtimeArgs": [
         "run",
         "--unstable",
-        "--inspect",
+        "--inspect-wait",
         "--allow-all",
         "advent.ts",
         "${input:dayPicker}",

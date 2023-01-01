@@ -104,7 +104,7 @@ describe("Day 04", () => {
         });
       });
     });
-    it('should get the correct answer', () => {
+    it("should get the correct answer", () => {
       const result = solutionA(exampleInput);
       assertEquals(result, 2);
     });
