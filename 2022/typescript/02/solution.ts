@@ -33,7 +33,7 @@ const resultMap = {
  *  opponent: [win, draw, lose]
  */
 const resultMapB = {
-  "A": ['B','A','C'],
+  "A": ["B", "A", "C"],
   "B": ["C", "B", "A"],
   "C": ["A", "C", "B"],
 };
@@ -60,7 +60,7 @@ export const getScore = (round: Round) => {
   return shapeScoreMap[round[1]] + resultScoreMap[result];
 };
 
-export const getScoreB = (round:Round)=>{
+export const getScoreB = (round: Round) => {
   const shape = compareRoundB(round);
   return shapeScoreMap[shape] + resultScoreMap[Result[round[1]]];
 };
@@ -68,13 +68,13 @@ export const getScoreB = (round:Round)=>{
 export const solutionA = flow(
   getRounds,
   (rounds: Round[]) => rounds.map(getScore),
-  addArrayElements
+  addArrayElements,
 );
 
 export const solutionB = flow(
   getRounds,
-  (rounds: Round[])=> rounds.map(getScoreB),
-  addArrayElements
+  (rounds: Round[]) => rounds.map(getScoreB),
+  addArrayElements,
 );
 
 // const input = await readInputFile('02');

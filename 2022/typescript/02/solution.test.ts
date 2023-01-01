@@ -79,68 +79,68 @@ describe("Day 02", () => {
 
   describe("Solution B", () => {
     describe("Need to win the round (Z)", () => {
-      it('should choose rock (A)', () => {
+      it("should choose rock (A)", () => {
         const round: Round = ["C", "Z"];
-        assertEquals(compareRoundB(round), 'A');
+        assertEquals(compareRoundB(round), "A");
       });
-      it('should choose paper (B)', () => {
+      it("should choose paper (B)", () => {
         const round: Round = ["A", "Z"];
-        assertEquals(compareRoundB(round), 'B');
+        assertEquals(compareRoundB(round), "B");
       });
-      it('should choose paper (C)', () => {
+      it("should choose paper (C)", () => {
         const round: Round = ["B", "Z"];
-        assertEquals(compareRoundB(round), 'C');
+        assertEquals(compareRoundB(round), "C");
       });
     });
 
     describe("Need to draw the round (Y)", () => {
-      it('should choose rock (A)', () => {
+      it("should choose rock (A)", () => {
         const round: Round = ["A", "Y"];
-        assertEquals(compareRoundB(round), 'A');
+        assertEquals(compareRoundB(round), "A");
       });
-      it('should choose paper (B)', () => {
+      it("should choose paper (B)", () => {
         const round: Round = ["B", "Y"];
-        assertEquals(compareRoundB(round), 'B');
+        assertEquals(compareRoundB(round), "B");
       });
-      it('should choose paper (C)', () => {
+      it("should choose paper (C)", () => {
         const round: Round = ["C", "Y"];
-        assertEquals(compareRoundB(round), 'C');
+        assertEquals(compareRoundB(round), "C");
       });
     });
 
     describe("Need to lose the round (X)", () => {
-      it('should choose rock (A)', () => {
+      it("should choose rock (A)", () => {
         const round: Round = ["B", "X"];
-        assertEquals(compareRoundB(round), 'A');
+        assertEquals(compareRoundB(round), "A");
       });
-      it('should choose paper (B)', () => {
+      it("should choose paper (B)", () => {
         const round: Round = ["C", "X"];
-        assertEquals(compareRoundB(round), 'B');
+        assertEquals(compareRoundB(round), "B");
       });
-      it('should choose paper (C)', () => {
+      it("should choose paper (C)", () => {
         const round: Round = ["A", "X"];
-        assertEquals(compareRoundB(round), 'C');
+        assertEquals(compareRoundB(round), "C");
       });
     });
 
-      describe("round result", () => {
-        it("should get correct score for Win", () => {
-          const round: Round = ["C", "Z"];
-          assertEquals(getScoreB(round), 7);
-        });
-        it("should get correct score for Draw", () => {
-          const round: Round = ["A", "Y"];
-          assertEquals(getScoreB(round), 4);
-        });
-        it("should get correct score for Lose", () => {
-          const round: Round = ["B", "X"];
-          assertEquals(getScoreB(round), 1);
-        });
+    describe("round result", () => {
+      it("should get correct score for Win", () => {
+        const round: Round = ["C", "Z"];
+        assertEquals(getScoreB(round), 7);
       });
+      it("should get correct score for Draw", () => {
+        const round: Round = ["A", "Y"];
+        assertEquals(getScoreB(round), 4);
+      });
+      it("should get correct score for Lose", () => {
+        const round: Round = ["B", "X"];
+        assertEquals(getScoreB(round), 1);
+      });
+    });
 
-      it('should get the correct total score',()=>{
-        const result = solutionB(exampleInput);
-        assertEquals(result, 12);
-      })
+    it("should get the correct total score", () => {
+      const result = solutionB(exampleInput);
+      assertEquals(result, 12);
+    });
   });
 });
